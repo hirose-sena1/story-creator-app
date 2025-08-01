@@ -15,7 +15,7 @@ st.set_page_config(
 
 # あなたのAPIキーを設定
 # このキーはサンプルです。ご自身のキーに置き換えてください。
-YOUR_API_KEY = "AIzaSyBiTpoEektczl3iB6K_yE_6E12upIEDDuw" 
+YOUR_API_KEY = st.secrets["GEMINI_API_KEY"]
 genai.configure(api_key=YOUR_API_KEY)
 
 
@@ -101,4 +101,3 @@ if st.sidebar.button("おはなしをつくる！"):
             st.write(story_text)
     else:
         st.sidebar.error("なまえとすきなものの両方を入力してね！")
-        
